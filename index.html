@@ -270,6 +270,7 @@ section {
 .info-placeholder {
   margin-top: 30px;
   padding: 60px;
+  font-size: large;
   border: 1px dashed rgba(212,175,55,0.3);
   color: #aaa;
 }
@@ -291,6 +292,10 @@ footer {
   padding: 30px;
   border-top: 1px solid rgba(212,175,55,0.2);
 }
+  .arak{
+    height: 70rem;
+    border-radius: 20px;
+  }
 
 /* 📱 MOBIL */
 @media (max-width: 768px) {
@@ -307,7 +312,7 @@ footer {
   }
 
   .logo {
-    height: 180px;
+    height: 300px;
   }
 
   .hero button {
@@ -328,10 +333,53 @@ footer {
   text-decoration: none;
 }
 
+html, body {
+  overflow-x: hidden;
+}
 
-  .arak{
-    height: 20px;
-  }
+/* minden elem maradjon a képernyőn belül */
+* {
+  max-width: 100%;
+}
+
+/* hosszú szöveg törése */
+p, h1, h2, h3, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* barber card biztos ne lógjon ki */
+.barber-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* kép ne tolja szét */
+.barber-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* hero content ne legyen túl széles */
+.hero-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* service grid fix */
+.service {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* NAV túlcsordulás fix */
+nav {
+  width: 100%;
+  justify-content: center;
+}
+
+
+
 }
   </style>
 </head>
@@ -352,7 +400,7 @@ footer {
 
 
 <section class="hero">
-    <img src="c706fca3-e877-4eda-8077-61e7a46fae9b.jfif" alt="logo" class="logo">
+    <img src="pics/c706fca3-e877-4eda-8077-61e7a46fae9b.jfif" alt="logo" class="logo">
   <div class="hero-content">
     <h2>Üdv az Enzo Barberben, Székesfehérváron!</h2>
     <p>Nálunk nemcsak egy hajvágásra ülsz be, hanem egy olyan helyre érkezel, ahol a stílus, a jó hangulat és a kikapcsolódás is együtt van. Az Enzo Barber célja, hogy igényes környezetben, precíz munkával és laza atmoszférával várja a vendégeket.
@@ -373,7 +421,7 @@ footer {
   <h2>Szolgáltatások/Árak</h2>
 
   <div class="service-grid">
-    <img class="arak" src="8ea53c7c-4693-4272-8038-051d0f3935cd.jfif" alt="">
+    <img class="arak" src="pics/8ea53c7c-4693-4272-8038-051d0f3935cd.jfif" alt="">
   </div>
 </section>
 
@@ -385,7 +433,7 @@ footer {
     <!-- MÁTÉ -->
      <a href="https://app.minup.io/book/enzo-barbershop" class="barber-card">
     
-      <img src="b41beb8a-3bc5-4c26-8adf-a32bab0273a9.jfif" alt="Klémán Máté">
+      <img src="pics/b41beb8a-3bc5-4c26-8adf-a32bab0273a9.jfif" alt="Klémán Máté">
       <div class="barber-text">
         <h3>Klémán Máté</h3>
         <p>
@@ -405,7 +453,7 @@ footer {
     </a>
     <!-- MILÁN -->
      <a href="https://app.minup.io/book/enzo-barbershop" class="barber-card">
-      <img src="cc1645e7-2816-41f6-844b-f09e1c4ce210.jfif" alt="Petrovics Milán">
+      <img src="pics/cc1645e7-2816-41f6-844b-f09e1c4ce210.jfif" alt="Petrovics Milán">
       <div class="barber-text">
         <h3>Petrovics Milán</h3>
         <p>
@@ -427,12 +475,6 @@ footer {
   </div>
 </section>
 
-<section id="gallery">
-  <h2>Galéria</h2>
-  <div class="gallery-placeholder">
-    Ide jön majd a galéria
-  </div>
-</section>
 
 <section id="info">
   <h2>Információk</h2>
